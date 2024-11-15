@@ -187,8 +187,8 @@ def add_dados():
 #salva as alterações
 def confirmar_alterar():
     try:
-        price = int(price_entry.get())
-        quant = int(quant_entry.get())
+        price = float(price_entry.get())
+        quant = float(quant_entry.get())
     except ValueError:
         messagebox.showinfo("ERRO","O preço e a quantidade devem ser um número")
         return
@@ -215,8 +215,8 @@ def confirmar_add():
     try:
         with open(data_path, 'r') as data:
             dados = json.load(data)
-            price = int(price_entry.get())
-            quant = int(quant_entry.get())
+            price = float(price_entry.get())
+            quant = float(quant_entry.get())
             if not (cod_entry.get() == '' or cod_entry.get() == ' '):
                 for i in dados:
                     if i.get('COD') == cod_entry.get().upper():
@@ -245,8 +245,8 @@ def confirmar_add():
             if not file:
                 with open(data_path, 'w') as new:
                     try:
-                        price = int(price_entry.get())
-                        quant = int(quant_entry.get())
+                        price = float(price_entry.get())
+                        quant = float(quant_entry.get())
                     except ValueError:
                         messagebox.showinfo("ERRO","O preço e a quantidade não podem estar vazios e devem ser um número")
                         return
@@ -262,7 +262,7 @@ def confirmar_add():
                             messagebox.showinfo("Sucesso", "Os dados foram salvos")
                             add_dados()
                         else:
-                            messagebox.ERROR("ERRO", "ESCOLHA UMA IMAGEM!")
+                            messagebox.showerror("ERRO", "ESCOLHA UMA IMAGEM!")
                             return
     except ValueError:
         messagebox.showinfo("ERRO","O preço e a quantidade não podem estar vazios e devem ser um número")
