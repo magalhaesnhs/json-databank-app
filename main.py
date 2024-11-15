@@ -212,7 +212,6 @@ def confirmar_alterar():
 
 def confirmar_add():
     dict_data = {}
-    index = 0
     try:
         with open(data_path, 'r') as data:
             dados = json.load(data)
