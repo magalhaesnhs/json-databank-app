@@ -2,3 +2,4 @@
 *.html linguist-detectable=false
 
 tex/* linguist-vendored
+*.toc linguist-vendored
