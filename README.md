@@ -1,5 +1,6 @@
 ## Gerenciador de Produtos 
 Este é um programa em Python que armazena dados de produtos em um arquivo JSON. Ele permite adicionar, remover e listar produtos. 
+![image](https://github.com/user-attachments/assets/1a442578-338e-4807-b4e9-b83f18bbd11a)
 ## Funcionalidades 
 - Adicionar um novo produto 
 - Remover um produto existente
